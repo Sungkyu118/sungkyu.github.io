@@ -14,9 +14,8 @@
                     <div class="modal-body">
                         <h2>{{ post.title }}</h2>
                         <hr class="star-primary">
-                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}"> {% if post.description %}
-                        <p>{{ post.description }}</p>
-                        {% endif %}
+                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+
                         <ul class="list-inline item-details">
                             {% if post.client %}
                             <li>고객사:
@@ -32,7 +31,12 @@
                             </li>
                             {% endif %}
                         </ul>
-                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>닫기</button>
+
+                        {% if post.description %}
+                        <p style="text-align: left;">{{ post.description }}</p>
+                        {% endif %}
+                        <br><br>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i><span>&nbsp;&nbsp;&nbsp;</span>닫기</button>
                     </div>
                 </div>
             </div>

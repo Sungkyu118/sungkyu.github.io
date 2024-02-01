@@ -8,5 +8,5 @@ alt: image-alt
 project-date: 2020-06 ~ 2020-11
 client: 한국사회보장정보원
 category: SI
-description: Use this area of the page to describe your project.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: 프로젝트 상세내용 작성 예정<br><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
