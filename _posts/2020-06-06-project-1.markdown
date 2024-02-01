@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 1
+title: 개인정보접속기록 솔루션 납품
+date: 2020-06-18
+img: cabin.png
+alt: image-alt
+project-date: 2020-06 ~ 2020-11
+client: 한국사회보장정보원
+category: SI
+description: Use this area of the page to describe your project.<br><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+---
