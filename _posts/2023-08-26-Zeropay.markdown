@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 7
+title: 제로페이 통합플랫폼 유지보수
+date: 2023-08-18
+img: safe.png
+alt: image-alt
+project-date: 2023-08 ~ 2023-10
+client: (재) 한국간편결제진흥원
+category: SI
+description: 프로젝트 상세내용 작성 예정
+---
