@@ -5,7 +5,7 @@ date: 2024-02-13 19:20:23 +0900
 category: Flutter
 ---
 # Flutter 개발환경
-> Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Integrated Development Environment)이 필요
+Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Integrated Development Environment)이 필요
 
 
 # SDK란?
@@ -13,9 +13,41 @@ category: Flutter
 
 Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도로 설치할 필요 없이 언어와 프레임워크를 한번에 설치할 수 있는게 특징
 
+https://flutter.dev
+
+Get Started 클릭
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 환경변수란?
 > 컴퓨터 프로그램이 실행되는 동안 사용할 수 있는 값을 저장하는 변수
+
 환경변수는 프로그램의 실행환경을 설정하는 데 사용되며, 프로그램이 다른 프로그램과 상호작용할 수 있도록 함
 
 # IDE란?
@@ -27,6 +59,7 @@ Flutter / Dart를 활용하기 위해서는 다음 2개의 IDE가 주로 많이 
 1. Android Studio
   Google과 JetBrains에서 개발한 IDE
   Flutter Plugin을 설치해서 Flutter IDE로 쓸 수 있으며, Android 개발을 위한 기본 도구들도 함께 사용이 가능
+
 2. Visual Studio Code
   VS Code는 Microsoft에서 개발한 오픈소스 IDE로, 경량화된 IDE의 대표주자
   Flutter Plugin을 설치해서 Flutter IDE로 활용이 가능
