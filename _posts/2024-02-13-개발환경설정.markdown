@@ -15,9 +15,11 @@ Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도�
 
 https://flutter.dev
 
-Get Started 클릭
+화면 상단의 Get Started 클릭
+![flutter.dev](/public/img/1st.png)
 
-
+OS 선택 (본인은 Window를 사용)
+![flutter.dev](/public/img/2nd.png)
 
 
 
