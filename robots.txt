@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://sungkyu118.github.io/
