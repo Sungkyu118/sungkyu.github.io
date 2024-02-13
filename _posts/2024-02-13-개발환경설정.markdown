@@ -22,10 +22,11 @@ Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도�
 > IDE는 프로그래머가 소프트웨어를 개발하는데 사용할 수 있는 소프트웨어
 
 소스코드 편집기, 디버거 및 빌드시스템과 같은 개발에 필요한 다양한 도구를 통합하여 제공
+
 Flutter / Dart를 활용하기 위해서는 다음 2개의 IDE가 주로 많이 사용됨
 1. Android Studio
-Google과 JetBrains에서 개발한 IDE
-Flutter Plugin을 설치해서 Flutter IDE로 쓸 수 있으며, Android 개발을 위한 기본 도구들도 함께 사용이 가능
+  Google과 JetBrains에서 개발한 IDE
+  Flutter Plugin을 설치해서 Flutter IDE로 쓸 수 있으며, Android 개발을 위한 기본 도구들도 함께 사용이 가능
 2. Visual Studio Code
-VS Code는 Microsoft에서 개발한 오픈소스 IDE로, 경량화된 IDE의 대표주자
-Flutter Plugin을 설치해서 Flutter IDE로 활용이 가능
+  VS Code는 Microsoft에서 개발한 오픈소스 IDE로, 경량화된 IDE의 대표주자
+  Flutter Plugin을 설치해서 Flutter IDE로 활용이 가능
