@@ -13,11 +13,13 @@ Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Inte
 
 Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도로 설치할 필요 없이 언어와 프레임워크를 한번에 설치할 수 있는게 특징
 
-https://flutter.dev  
+[https://flutter.dev](https://flutter.dev)
 
+<br>
 화면 상단의 Get Started 클릭  
 ![flutter.dev](/public/img/1st.png)  
 
+<br>
 OS 선택 (본인은 Window를 사용)  
 ![flutter.dev](/public/img/2nd.png)  
 
