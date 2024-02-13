@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Markdown Sample
-permalink: /about/
+permalink: /sample/
 ---
 
 ## Theme Monos
