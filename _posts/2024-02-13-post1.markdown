@@ -2,7 +2,7 @@
 layout: post
 title: 제목
 date: 2024-02-13 19:20:23 +0900
-category: 샘플
+category: Sample
 ---
 # 예제
 > 내용들?
