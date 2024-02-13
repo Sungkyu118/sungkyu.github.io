@@ -6,23 +6,28 @@ category: Flutter
 ---
 # Flutter 개발환경
 Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Integrated Development Environment)이 필요
+
 <br>
 
 # SDK란?
 > Software Development Kit의 약자로 프레임워크 등을 개발활용하는데에 있어 필요한 기본 라이브러리, 도구, 문서 등을 모아둔 패키지
 
 Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도로 설치할 필요 없이 언어와 프레임워크를 한번에 설치할 수 있는게 특징
+
 <br>
 
 [https://flutter.dev](https://flutter.dev)
+
 <br>
 
 화면 상단의 Get Started 클릭  
 ![flutter.dev](/public/img/1st.png)  
+
 <br>
 
 OS 선택 (본인은 Window를 사용)  
 ![flutter.dev](/public/img/2nd.png)  
+
 <br>
 
 
