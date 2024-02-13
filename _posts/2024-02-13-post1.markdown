@@ -1,0 +1,14 @@
+---
+layout: post
+title: 제목
+date: 2024-02-13 19:20:23 +0900
+category: 샘플
+---
+# 예제
+> 내용들?
+
+내용들 작성
+
+```ruby
+print 'hello world'
+```
