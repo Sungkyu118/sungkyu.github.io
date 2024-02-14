@@ -4,7 +4,7 @@ title: Flutter 개발환경 설정
 date: 2024-02-13 19:20:23 +0900
 category: Flutter
 ---
-# Flutter 개발환경
+# [Flutter] Flutter 개발환경
 Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Integrated Development Environment)이 필요
 
 <br>
@@ -20,27 +20,27 @@ Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도�
 
 <br>
 
-화면 상단의 Get Started 클릭  
+1. 화면 상단의 Get Started 클릭  
 ![1st](/public/img/1st.png)  
 
 <br>
 
-OS 선택 (본인은 Window를 사용)  
+2. OS 선택 (본인은 Window를 사용)  
 ![2nd](/public/img/2nd.png)  
 
 <br>
 
-App type 선택 (본인은 Mobile 선택)    
+3. App type 선택 (본인은 Mobile 선택)    
 ![3rn](/public/img/3rd.png)  
 
 <br>
 
-Flutter SDK zip파일을 다운로드  
+4. Flutter SDK zip파일을 다운로드  
 ![4th](/public/img/4th.png)  
 
 <br>
 
-zip파일을 압축해제  
+5. zip파일을 압축해제  
 ![5th](/public/img/5th.png)  
 
 <br>
@@ -52,27 +52,27 @@ zip파일을 압축해제
 
 <br>
 
-제어판 - '환경 변수' 검색 - '시스템 환경 변수 편집' 클릭  
+1. 제어판 - '환경 변수' 검색 - '시스템 환경 변수 편집' 클릭  
 ![6th](/public/img/6th.png)  
 
 <br>
 
-환경변수(N) 클릭  
+2. 환경변수(N) 클릭  
 ![7th](/public/img/7th.png)  
 
 <br>
 
-시스템 변수 중 **Path**를 선택 후 편집 or 더블클릭  
+3. 시스템 변수 중 **Path**를 선택 후 편집 or 더블클릭  
 ![8th](/public/img/8th.png)  
 
 <br>
 
-Flutter폴더의 **bin** 경로를 입력 후 확인  
+4. Flutter폴더의 **bin** 경로를 입력 후 확인  
 ![9th](/public/img/9th.png)  
 
 <br>
 
-명령 프롬프트에 **flutter --version**을 입력 후 실행했을 때, 버전정보가 표시되면 정상  
+5. 명령 프롬프트에 **flutter --version**을 입력 후 실행했을 때, 버전정보가 표시되면 정상  
 ![10th](/public/img/10th.png)  
 
 <br>
