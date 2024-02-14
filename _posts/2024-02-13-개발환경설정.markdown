@@ -10,9 +10,9 @@ Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Inte
 <br>
 
 # SDK란?
-> Software Development Kit의 약자로 프레임워크 등을 개발활용하는데에 있어 필요한 기본 라이브러리, 도구, 문서 등을 모아둔 패키지
+> Software Development Kit의 약자로 프레임워크 등을 개발활용하는데에 있어 필요한 기본 라이브러리, 도구, 문서 등을 모아둔 **패키지**
 
-Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도로 설치할 필요 없이 언어와 프레임워크를 한번에 설치할 수 있는게 특징
+Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도로 설치할 필요 없이 **언어와 프레임워크를 한번에 설치**할 수 있는게 특징
 
 <br>
 
@@ -21,46 +21,62 @@ Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도�
 <br>
 
 화면 상단의 Get Started 클릭  
-![flutter.dev](/public/img/1st.png)  
+![1st](/public/img/1st.png)  
 
 <br>
 
 OS 선택 (본인은 Window를 사용)  
-![flutter.dev](/public/img/2nd.png)  
+![2nd](/public/img/2nd.png)  
 
 <br>
 
+App type 선택 (본인은 Mobile 선택)    
+![3rn](/public/img/3rd.png)  
 
+<br>
 
+Flutter SDK zip파일을 다운로드  
+![4th](/public/img/4th.png)  
 
+<br>
 
+zip파일을 압축해제  
+![5th](/public/img/5th.png)  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
 
 # 환경변수란?
 > 컴퓨터 프로그램이 실행되는 동안 사용할 수 있는 값을 저장하는 변수
 
 환경변수는 프로그램의 실행환경을 설정하는 데 사용되며, 프로그램이 다른 프로그램과 상호작용할 수 있도록 함
+
 <br>
+
+제어판 - '환경 변수' 검색 - '시스템 환경 변수 편집' 클릭  
+![6th](/public/img/6th.png)  
+
+<br>
+
+환경변수(N) 클릭  
+![7th](/public/img/7th.png)  
+
+<br>
+
+시스템 변수 중 **Path**를 선택 후 편집 or 더블클릭  
+![8th](/public/img/8th.png)  
+
+<br>
+
+Flutter폴더의 **bin** 경로를 입력 후 확인  
+![9th](/public/img/9th.png)  
+
+<br>
+
+명령 프롬프트에 **flutter --version**을 입력 후 실행했을 때, 버전정보가 표시되면 정상  
+![10th](/public/img/10th.png)  
+
+<br>
+
 
 # IDE란?
 > IDE는 프로그래머가 소프트웨어를 개발하는데 사용할 수 있는 소프트웨어
