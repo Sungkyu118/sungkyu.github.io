@@ -3,6 +3,7 @@ layout: post
 title: Flutter 개발환경 설정
 date: 2024-02-13 19:20:23 +0900
 category: Flutter
+permalink: /flutter/settings
 ---
 # [Flutter] Flutter 개발환경
 Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Integrated Development Environment)이 필요
