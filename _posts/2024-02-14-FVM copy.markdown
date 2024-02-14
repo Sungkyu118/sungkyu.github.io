@@ -1,0 +1,103 @@
+---
+layout: post
+title: FVM으로 Flutter 버전 관리
+date: 2024-02-14 14:57:00 +0900
+category: Flutter
+permalink: /flutter/fvm
+---
+# [Flutter] FVM으로 Flutter 버전 관리
+<br>
+Flutter는 버전 업그레이드가 매우 빠른편이며, 개발 상황에 따라 버전이슈가 발생할 여지가 큰 편 (ex. 빌드 실패)  
+
+ 이에 따라, FVM(**F**lutter **V**ersion **M**anagement)이란 툴을 사용하면 Flutter 버전을 편리하게 바꿔가며 개발이 가능  
+<br>
+
+먼저 chocolatey를 설치해야 함  
+[docs.chocolatey.org/en-us/choco/setup](https://docs.chocolatey.org/en-us/choco/setup)  
+<br>
+
+chocolatey를 설치하기 위해 Powershell 실행정책을 먼저 체크
+```
+Get-ExecutionPolicy
+```
+<br>
+
+실행결과가 Restricted라면, 아래의 명령어를 실행해서 정책을 변경
+```
+Set-ExecutionPolicy Bypass -Scope Process
+```
+![fvm1](/public/img/fvm1.png)  
+
+<br>
+
+chocolatey를 설치
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::
+SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient)
+.DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+![fvm2](/public/img/fvm2.png)  
+
+<br>
+
+
+chocolatey가 정상적으로 설치되었는지 확인
+```
+choco -v
+```
+![fvm3](/public/img/fvm3.png)  
+
+<br>
+
+
+chocolatey를 사용해서 fvm을 설치
+
+```
+choco install fvm
+```
+
+<br>
+---
+<span style="color: red;">* 만약 FailThroughError관련 에러가 발생하며 설치가 중단될 경우,</span>
+<br><br>
+
+1. **Path**의 Flutter경로를 삭제
+2. choco uninstall fvm 실행 (불완전한 설치이기 때문에 삭제)
+3. choco install fvm 재실행
+---
+<br><br>
+정상적으로 설치가 완료되었다면, 버전을 확인
+
+```
+fvm --version
+```
+![fvm4](/public/img/fvm4.png)  
+
+<br>
+
+
+fvm에서 Release 버전들을 확인
+```
+fvm releases
+```
+![fvm5](/public/img/fvm5.png)  
+
+<br>
+
+
+
+이 중에서 사용하고 싶은 버전을 설치하는 것이 가능
+```
+fvm install 3.16.9
+fvm list
+```
+![fvm6](/public/img/fvm6.png)  
+
+<br>
+
+
+fvm에서 시스템 전역으로 사용할 버전을 설정
+```
+fvm global 3.16.9
+```
+![fvm7](/public/img/fvm7.png)  
