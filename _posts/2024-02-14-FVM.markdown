@@ -45,8 +45,7 @@ choco install fvm
 ```
 
 <br>
-<span style="color: red;">
-* 만약 FailThroughError관련 에러가 발생하며 설치가 중단될 경우,
+<span style="color: red;">* 만약 FailThroughError관련 에러가 발생하며 설치가 중단될 경우,</span>
 <br><br>
 
 1. **Path**의 Flutter경로를 잠깐 삭제
@@ -54,8 +53,7 @@ choco install fvm
 3. choco install fvm 재실행
 4. **Path**의 Flutter경로를 재등록
 
-</span>
-
+<br><br>
 정상적으로 설치가 완료되었다면, 버전을 확인
 
 ```PowerShell
