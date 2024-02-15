@@ -42,7 +42,7 @@ SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
 
 
 chocolatey가 정상적으로 설치되었는지 확인
-```
+```powershell
 choco -v
 ```
 ![fvm3](/public/img/fvm3.png)  
@@ -52,7 +52,7 @@ choco -v
 
 chocolatey를 사용해서 fvm을 설치
 
-```
+```powershell
 choco install fvm
 ```
 
@@ -68,7 +68,7 @@ choco install fvm
 <br><br>
 정상적으로 설치가 완료되었다면, 버전을 확인
 
-```
+```powershell
 fvm --version
 ```
 ![fvm4](/public/img/fvm4.png)  
@@ -77,7 +77,7 @@ fvm --version
 
 
 fvm에서 Release 버전들을 확인
-```
+```powershell
 fvm releases
 ```
 ![fvm5](/public/img/fvm5.png)  
@@ -87,7 +87,7 @@ fvm releases
 
 
 이 중에서 사용하고 싶은 버전을 설치하는 것이 가능
-```
+```powershell
 fvm install 3.16.9
 fvm list
 ```
@@ -97,7 +97,7 @@ fvm list
 
 
 fvm에서 시스템 전역으로 사용할 버전을 설정
-```
+```powershell
 fvm global 3.16.9
 ```
 ![fvm7](/public/img/fvm7.png)  
