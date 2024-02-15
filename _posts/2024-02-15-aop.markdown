@@ -1,0 +1,284 @@
+---
+layout: post
+title: Spring Boot AOP
+date: 2024-02-15 22:57:00 +0900
+category: SpringBoot
+permalink: /flutter/springboot/aop
+---
+# AOP(Aspect-Oriented Programming)란?
+
+AOP는 관점 지향 프로그래밍(Aspect-Oriented Programming)의 약자로, 프로그램의 여러 부분에서 발생하는 공통 관심사를 모듈화하여 코드의 중복을 줄이고 유지보수성을 높이는 프로그래밍 패러다임입니다. 전통적인 객체 지향 프로그래밍에서는 핵심 기능과 횡단 관심사(cross-cutting concern)를 구분하기 위해 여러 디자인 패턴과 기법을 사용해야 했습니다. 그러나 AOP는 이러한 횡단 관심사를 명시적으로 분리하여 관리할 수 있도록 합니다.
+
+## AOP의 주요 개념
+
+### 1. Aspect (관점)
+
+관점은 횡단 관심사를 모듈화한 것입니다. 로깅, 트랜잭션 관리, 보안 등과 같은 횡단 관심사는 여러 모듈 또는 계층에 걸쳐 있을 수 있습니다. Aspect는 이러한 관심사를 모듈화하여 코드 중복을 방지하고 관리를 용이하게 합니다.
+
+### 2. Joinpoint (조인포인트)
+
+Joinpoint는 Aspect가 적용될 수 있는 위치를 의미합니다. 메소드 실행, 메소드 호출, 필드 수정 등과 같은 프로그램 실행 시점의 특정 지점을 가리킵니다.
+
+### 3. Advice (조언)
+
+Advice는 횡단 관심사를 실제로 구현한 것으로, Aspect가 Joinpoint에서 실행하는 코드를 말합니다. Advice에는 다양한 종류가 있습니다. 예를 들어, Before Advice는 Joinpoint 실행 전에 실행되는 코드를 나타내며, After Returning Advice는 Joinpoint가 성공적으로 실행된 후에 실행되는 코드를 나타냅니다.
+
+### 4. Pointcut (점컷)
+
+Pointcut은 어떤 Joinpoint가 Advice를 적용할지를 결정하는 표현식입니다. 메소드 이름, 패키지 이름, 어노테이션 등과 같은 Joinpoint를 선택하는데 사용됩니다.
+
+### 5. Weaving (위빙)
+
+Weaving은 Aspect를 지정된 Joinpoint에 적용하여 실제 코드에 삽입하는 프로세스를 말합니다. 즉, Aspect의 Advice를 실제 코드에 삽입하여 원하는 동작을 수행하도록 만드는 과정입니다.
+
+<br>
+
+---
+
+<br>
+
+## AOP의 장점
+
+- **모듈성 향상**: 관심사의 분리를 통해 코드의 모듈성을 향상시킵니다. 비즈니스 로직과 횡단 관심사를 분리하여 각각의 모듈을 더욱 깔끔하고 이해하기 쉽게 만들 수 있습니다.
+- **재사용성 증가**: AOP를 사용하면 여러 모듈에서 공통으로 사용되는 코드를 재사용할 수 있습니다. 이로 인해 코드의 중복을 줄이고 유지보수성을 높일 수 있습니다.
+- **유연성 향상**: 새로운 기능을 추가하거나 기존 기능을 변경할 때, Aspect를 수정하면 됩니다. 이는 비즈니스 로직을 변경하지 않고도 횡단 관심사를 변경할 수 있음을 의미합니다.
+
+AOP는 다양한 프로그래밍 언어와 프레임워크에서 지원되며, Spring Framework와 같은 프레임워크에서도 널리 사용됩니다.
+
+<br>
+<br>
+
+# AOP의 단점
+
+## 1. 복잡성
+
+AOP는 프로그램의 여러 부분에서 발생하는 공통 관심사를 분리하여 모듈화하는 것을 목표로 하지만, 이로 인해 코드의 복잡성이 증가할 수 있습니다. 특히, Aspect와 Pointcut을 정의하고 적절한 Advice를 작성하는 과정이 복잡할 수 있습니다.
+
+## 2. 어려운 디버깅
+
+AOP를 사용하면 코드의 흐름이 분산되어 있기 때문에 디버깅이 어려울 수 있습니다. 특히, 여러 개의 Aspect가 적용되고 복잡한 Pointcut을 사용하는 경우에는 어떤 Advice가 어떤 Joinpoint에서 실행되는지 추적하기 어려울 수 있습니다.
+
+## 3. 성능 저하
+
+AOP는 프로그램 실행 중에 Aspect를 원하는 Joinpoint에 적용하여 코드를 수정하므로 성능에 영향을 줄 수 있습니다. 특히, Around Advice를 사용하는 경우에는 메소드 실행을 중간에서 가로채어 추가 작업을 수행하기 때문에 성능 저하가 발생할 수 있습니다.
+
+## 4. 오버헤드
+
+AOP는 프로그램 실행 중에 Aspect를 적용하기 위해 추가적인 오버헤드가 발생할 수 있습니다. AspectJ와 같은 AOP 프레임워크는 클래스 로딩 시점이나 프록시 생성 등의 작업을 수행하므로 초기화 과정에서 오버헤드가 발생할 수 있습니다.
+
+## 5. 학습 곡선
+
+AOP는 전통적인 객체 지향 프로그래밍과는 다른 개념을 포함하고 있기 때문에 학습 곡선이 높을 수 있습니다. 특히, Aspect와 Pointcut을 올바르게 이해하고 적용하는 것이 어려울 수 있습니다.
+
+위와 같은 단점들은 AOP를 사용할 때 고려해야 할 사항들입니다. 프로젝트의 요구사항과 팀의 기술적 경험에 따라 AOP의 장점과 단점을 고려하여 적절히 활용해야 합니다.
+
+<br>
+
+---
+
+<br>
+
+
+# AOP의 Pointcut 종류
+
+AOP에서는 다양한 Pointcut 표현식을 사용하여 Advice가 적용될 Joinpoint를 선택할 수 있습니다. 각각의 Pointcut 표현식은 특정한 Joinpoint를 선택하는 데 사용됩니다.
+
+## 1. Execution Pointcut
+
+메소드 실행 시점에 Advice를 적용하는 데 사용됩니다. 특정 패키지, 클래스, 메소드 등을 기준으로 선택할 수 있습니다. 
+
+```java
+execution(public * com.example.service.*.*(..))
+execution(* save*(..))
+execution(* *(int, *))
+```
+<br>
+
+## 2. Within Pointcut
+
+특정 타입 내부에서 발생하는 모든 Joinpoint를 선택하는 데 사용됩니다. 클래스 또는 패키지 내에서 Advice를 적용할 때 유용합니다. 
+
+```java
+within(com.example.service.*)
+within(com.example.service.*Service)
+```
+<br>
+
+## 3. This Pointcut
+
+대상 객체의 타입과 일치하는 Joinpoint를 선택하는 데 사용됩니다. 
+
+```java
+this(com.example.service.SomeService)
+```
+<br>
+
+## 4. Target Pointcut
+
+대상 객체의 타입과 일치하는 Joinpoint를 선택하는 데 사용됩니다. this와 유사하지만 대상 객체의 정적 타입을 기준으로 선택합니다. 
+
+```java
+target(com.example.service.SomeServiceImpl)
+```
+<br>
+
+## 5. Args Pointcut
+
+메소드의 파라미터 타입과 일치하는 Joinpoint를 선택하는 데 사용됩니다. 
+
+```java
+args(String, ..)
+```
+<br>
+
+## 6. Annotation Pointcut
+
+특정 어노테이션이 적용된 메소드에 Advice를 적용하는 데 사용됩니다. 
+
+```java
+@annotation(org.springframework.transaction.annotation.Transactional)
+```
+<br>
+위의 Pointcut 종류를 조합하여 더 복잡한 선택 기준을 만들 수 있습니다. 이러한 Pointcut 표현식을 사용하여 원하는 Joinpoint를 선택하고 AOP의 Advice를 적용할 수 있습니다.
+
+<br>
+
+---
+
+<br>
+
+# Spring Boot AOP (Aspect-Oriented Programming)란?
+
+Spring Boot AOP는 관점 지향 프로그래밍(Aspect-Oriented Programming)의 개념을 Spring Boot 프레임워크에 적용한 것입니다. AOP는 프로그램의 여러 부분에서 공통적으로 발생하는 관심사를 분리하여 모듈화하는 프로그래밍 패러다임입니다. 주요 목표는 <span style="color: blue;">코드의 재사용성과 모듈성을 향상</span>시키는 것입니다.<br><br>
+
+Spring Boot AOP는 메소드 실행 전후 또는 예외 발생 시 특정한 동작을 삽입할 수 있게 해줍니다. 이를 통해 코드의 중복을 줄이고 관심사를 분리하여 코드를 더욱 깔끔하고 유지보수하기 쉽게 만들 수 있습니다.
+
+## Spring Boot AOP의 주요 기능
+
+1. **Advice**: Advice는 관점 지향 프로그래밍에서 어떤 동작이 실행될 때 삽입되는 코드 블록을 나타냅니다. Spring Boot AOP에서는 다음과 같은 종류의 Advice를 제공합니다:
+   - Before Advice: 메소드 실행 전에 실행되는 advice.
+   - After Returning Advice: 메소드가 성공적으로 반환된 후 실행되는 advice.
+   - After Throwing Advice: 메소드가 예외를 던진 후 실행되는 advice.
+   - After Advice: 메소드가 실행된 후 (성공 또는 예외 상관없이) 실행되는 advice.
+   - Around Advice: 메소드 실행 전후에 실행되는 advice. 가장 유연한 형태의 advice로, 메소드 실행을 직접 제어할 수 있습니다.
+
+2. **Pointcut**: Pointcut은 어떤 joinpoint를 어떤 advice에 연결할 것인지를 결정하는 방법을 정의합니다. 예를 들어, "모든 Service 계층의 메소드"나 "특정 패키지 내의 모든 메소드"와 같은 방식으로 정의될 수 있습니다.
+
+3. **Aspect**: Aspect는 Advice와 Pointcut을 함께 그룹화한 것입니다. Aspect는 여러 개의 Advice와 Pointcut을 포함할 수 있습니다.
+
+## Spring Boot AOP 사용 예시
+
+아래는 Spring Boot에서 다섯 가지 종류의 Advice에 대한 각각의 예제를 작성한 것입니다.
+
+### 1. Before Advice (메소드 실행 전)
+
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @Before("execution(* com.example.myapp.service.*.*(..))")
+    public void beforeServiceMethods() {
+        System.out.println("Before executing any service method");
+    }
+}
+```
+
+위의 예제에서는 Service 계층의 모든 메소드가 실행되기 전에 "Before executing any service method"라는 메시지를 출력하는 Before Advice를 정의했습니다.
+<br><br>
+
+### 2. After Returning Advice (메소드가 성공적으로 반환된 후)
+
+```java
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @AfterReturning("execution(* com.example.myapp.service.*.*(..))")
+    public void afterReturningServiceMethods() {
+        System.out.println("After returning from service method");
+    }
+}
+```
+
+위의 예제에서는 Service 계층의 모든 메소드가 성공적으로 반환된 후에 "After returning from service method"라는 메시지를 출력하는 After Returning Advice를 정의했습니다.
+<br><br>
+
+### 3. After Throwing Advice (메소드가 예외를 던진 후)
+
+```java
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @AfterThrowing("execution(* com.example.myapp.service.*.*(..))")
+    public void afterThrowingServiceMethods() {
+        System.out.println("After throwing exception from service method");
+    }
+}
+```
+
+위의 예제에서는 Service 계층의 메소드가 예외를 던진 후에 "After throwing exception from service method"라는 메시지를 출력하는 After Throwing Advice를 정의했습니다.
+<br><br>
+
+### 4. After Advice (메소드가 실행된 후)
+
+```java
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @After("execution(* com.example.myapp.service.*.*(..))")
+    public void afterServiceMethods() {
+        System.out.println("After executing service method (regardless of outcome)");
+    }
+}
+```
+
+위의 예제에서는 Service 계층의 메소드가 실행된 후에 "After executing service method (regardless of outcome)"라는 메시지를 출력하는 After Advice를 정의했습니다.
+<br><br>
+
+### 5. Around Advice (메소드 실행 전후)
+
+```java
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+
+    @Around("execution(* com.example.myapp.service.*.*(..))")
+    public Object aroundServiceMethods(ProceedingJoinPoint joinPoint) throws Throwable {
+        System.out.println("Before executing service method");
+
+        Object result = joinPoint.proceed();
+
+        System.out.println("After executing service method");
+
+        return result;
+    }
+}
+```
+
+위의 예제에서는 Service 계층의 메소드 실행 전후에 추가 작업을 수행하는 Around Advice를 정의했습니다. `ProceedingJoinPoint`를 사용하여 메소드 실행을 직접 제어하고, 메소드 실행 전후에 원하는 동작을 추가할 수 있습니다.
+<br><br>
+각 Advice에 대한 예제는 위와 같습니다. 원하는 경우 패키지 이름 및 메소드 시그니처를 실제 프로젝트에 맞게 수정하여 사용할 수 있습니다.
