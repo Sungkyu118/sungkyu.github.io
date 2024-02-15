@@ -1,0 +1,23 @@
+* {
+	letter-spacing: 1px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead{
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+table thead th {
+  padding: 10px 15px;
+  font-weight: bold;
+  background: #f3f6f7;
+}
+
+table tbody td {
+  padding: 10px 15px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
