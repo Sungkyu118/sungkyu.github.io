@@ -17,13 +17,13 @@ Flutter는 버전 업그레이드가 매우 빠른편이며, 개발 상황에 �
 <br>
 
 chocolatey를 설치하기 위해 Powershell 실행정책을 먼저 체크
-```
+```powershell
 Get-ExecutionPolicy
 ```
 <br>
 
 실행결과가 Restricted라면, 아래의 명령어를 실행해서 정책을 변경
-```
+```powershell
 Set-ExecutionPolicy Bypass -Scope Process
 ```
 ![fvm1](/public/img/fvm1.png)  
@@ -31,7 +31,7 @@ Set-ExecutionPolicy Bypass -Scope Process
 <br>
 
 chocolatey를 설치
-```
+```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::
 SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient)
 .DownloadString('https://community.chocolatey.org/install.ps1'))
