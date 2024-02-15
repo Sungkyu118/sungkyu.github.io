@@ -10,3 +10,8 @@ permalink: /flutter/dart/function-method
 
 시작에 앞서, Dart의 공식문서를 통해서도 학습이 가능하며 아래의 링크를 참고  
 https://dart-ko.dev/guides
+
+
+```dart
+print('123')
+```
