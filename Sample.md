@@ -1,9 +1,9 @@
 ---
-layout: page
-title: Markdown Sample
-permalink: /sample/
----
 
+title: Markdown Sample
+permalink: /sample
+---
+layout: page
 ## Theme Monos
 > Simple and lightweight theme for Jekyll
 
