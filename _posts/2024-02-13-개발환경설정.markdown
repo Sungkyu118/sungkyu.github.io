@@ -1,0 +1,95 @@
+---
+layout: post
+title: Flutter 개발환경 설정
+date: 2024-02-13 19:20:23 +0900
+category: Flutter
+permalink: /flutter/settings
+---
+# [Flutter] Flutter 개발환경
+Flutter 개발을 위해서는 Dart의 SDK(Software Development Kit)와 IDE(Integrated Development Environment)이 필요
+
+<br>
+
+# SDK란?
+> Software Development Kit의 약자로 프레임워크 등을 개발활용하는데에 있어 필요한 기본 라이브러리, 도구, 문서 등을 모아둔 **패키지**
+
+Flutter SDK에는 기본적으로 Dart가 내장되어 있어서 Dart를 별도로 설치할 필요 없이 **언어와 프레임워크를 한번에 설치**할 수 있는게 특징
+
+<br>
+
+[https://flutter.dev](https://flutter.dev)
+
+<br>
+
+1. 화면 상단의 Get Started 클릭  
+![1st](/public/img/1st.png)  
+
+<br>
+
+2. OS 선택 (본인은 Window를 사용)  
+![2nd](/public/img/2nd.png)  
+
+<br>
+
+3. App type 선택 (본인은 Mobile 선택)    
+![3rn](/public/img/3rd.png)  
+
+<br>
+
+4. Flutter SDK zip파일을 다운로드  
+![4th](/public/img/4th.png)  
+
+<br>
+
+5. zip파일을 압축해제  
+![5th](/public/img/5th.png)  
+
+<br>
+
+# 환경변수란?
+> 컴퓨터 프로그램이 실행되는 동안 사용할 수 있는 값을 저장하는 변수
+
+환경변수는 프로그램의 실행환경을 설정하는 데 사용되며, 프로그램이 다른 프로그램과 상호작용할 수 있도록 함
+
+<br>
+
+1. 제어판 - '환경 변수' 검색 - '시스템 환경 변수 편집' 클릭  
+![6th](/public/img/6th.png)  
+
+<br>
+
+2. 환경변수(N) 클릭  
+![7th](/public/img/7th.png)  
+
+<br>
+
+3. 시스템 변수 중 **Path**를 선택 후 편집 or 더블클릭  
+![8th](/public/img/8th.png)  
+
+<br>
+
+4. Flutter폴더의 **bin** 경로를 입력 후 확인  
+![9th](/public/img/9th.png)  
+
+<br>
+
+5. 명령 프롬프트에 **flutter --version**을 입력 후 실행했을 때, 버전정보가 표시되면 정상  
+![10th](/public/img/10th.png)  
+
+<br>
+
+
+# IDE란?
+> IDE는 프로그래머가 소프트웨어를 개발하는데 사용할 수 있는 소프트웨어
+
+소스코드 편집기, 디버거 및 빌드시스템과 같은 개발에 필요한 다양한 도구를 통합하여 제공
+
+Flutter / Dart를 활용하기 위해서는 다음 2개의 IDE가 주로 많이 사용됨
+1. Android Studio  
+  Google과 JetBrains에서 개발한 IDE  
+  Flutter Plugin을 설치해서 Flutter IDE로 쓸 수 있으며, Android 개발을 위한 기본 도구들도 함께 사용이 가능
+
+2. Visual Studio Code  
+  VS Code는 Microsoft에서 개발한 오픈소스 IDE로, 경량화된 IDE의 대표주자  
+  Flutter Plugin을 설치해서 Flutter IDE로 활용이 가능
+  <br>
