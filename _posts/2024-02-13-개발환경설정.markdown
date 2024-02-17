@@ -4,6 +4,7 @@ title: Flutter 개발환경 설정
 date: 2024-02-13 19:20:23 +0900
 category: Flutter
 permalink: /flutter/settings
+tags: [Flutter]
 ---
 
 # [Flutter] Flutter 개발환경

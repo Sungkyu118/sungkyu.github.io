@@ -4,6 +4,7 @@ title: Dart 함수 / 메서드
 date: 2024-02-14 21:30:00 +0900
 category: Flutter
 permalink: /flutter/dart/function-method
+tags: [dart]
 ---
 
 # [Flutter] Dart 함수 / 메서드
