@@ -35,10 +35,10 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 두둥자
-  email: example@domain.com # change to your email address
+  email: kskcjswo@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
+    -  # change to your twitter homepage
     - https://github.com/sungkyu118 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
