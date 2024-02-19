@@ -1,3 +1,4 @@
 #sidebar {
-  background-color: aqua !important;
+  background-image: url('/assets/img/sidebar_background.jpg') !important;
+  opacity: 0.8;
 }
