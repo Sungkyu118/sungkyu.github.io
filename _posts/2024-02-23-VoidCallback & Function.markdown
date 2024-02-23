@@ -8,7 +8,7 @@ tags: [VoidCallback, Function]
 ---
 
 Flutter는 하나의 Widget에서 다른 Widget으로 이벤트 처리를 할때는 방식이 꽤나 까다로워진다.  
-이 때 사용하는 방식은 Function, 즉 (Callback)함수 자체를 넘겨주는 방식이다.
+이 때 사용하는 방식은 [Function](https://api.flutter.dev/flutter/dart-core/Function-class.html), 즉 (Callback)함수 자체를 넘겨주는 방식이다.
 
 아래의 예시는 Statelsess한 Button위젯을 클릭했을 때, Stateful한 위젯에 표시되는 값을 변경하게 된다.
 
@@ -22,7 +22,7 @@ Flutter는 하나의 Widget에서 다른 Widget으로 이벤트 처리를 할때
 <br>
 함수를 전달받는 변수는 Function타입으로 선언하며, () 안에 전달받을 변수들의 type을 동일하게 정의해야 한다.
 
-Function()처럼 값을 전달하지 않을 때는 VoidCallback을 사용해도 무방하다. (32번째 줄)
+Function()처럼 값을 전달하지 않을 때는 [VoidCallback](https://api.flutter.dev/flutter/dart-ui/VoidCallback.html)을 사용해도 무방하다. (32번째 줄)
 <br>
 <br>
 
