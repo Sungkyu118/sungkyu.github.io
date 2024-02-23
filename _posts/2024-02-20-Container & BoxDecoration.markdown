@@ -7,8 +7,6 @@ permalink: /flutter/containercolor
 tags: [Container, BoxDecoration]
 ---
 
-<br>
-
 Container Widget에서 color값을 설정한 상태로, decoration값에 BoxDecoration을 주었을 때, 에러가 발생한다.
 
 ![error1](/assets/img/container_error1.png)

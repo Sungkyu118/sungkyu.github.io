@@ -7,8 +7,6 @@ permalink: /flutter/callback
 tags: [VoidCallback, Function]
 ---
 
-<br>
-
 Flutter는 하나의 Widget에서 다른 Widget으로 이벤트 처리를 할때는 방식이 꽤나 까다로워진다.  
 이 때 사용하는 방식은 Function, 즉 (Callback)함수 자체를 넘겨주는 방식이다.
 

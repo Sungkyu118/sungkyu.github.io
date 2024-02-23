@@ -1,0 +1,61 @@
+---
+layout: post
+title: Image 등록 및 사용
+date: 2024-02-23 21:10:00 +0900
+category: Flutter
+permalink: /flutter/images
+tags: [assets, images]
+---
+
+Flutter에서 정적인 Image를 사용할 때는, 프로젝트 내에 저장을 하는 일반적인 방법에 추가로 pubspec.yaml에도 자원등록 과정을 해줘야 한다.
+
+<br>
+
+<span style="color: orange;">\* 참고로 Android Studio로 개발 중에 pubspec.yaml 수정 & 프로젝트 내에 새로운 Image가 추가되었을 경우, Hot Restart/Reload로는 변경사항이 반영되지 않으며 **반드시 Stop/Start**를 해주어야 한다.</span>
+
+<br>
+
+Image의 경로를 flutter.assets 속성에 등록해줘야 하며,  
+9~11번째 줄처럼 image를 하나씩 등록하는 방법과
+12번째 줄처럼 하나의 폴더 안에 있는 모든 image를 한꺼번에 등록하는 방법이 있다.
+
+```yaml
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/sample1.png
+    - assets/images/sample2.png
+    - assets/images/sample3.png
+    - assets/images/
+# An image asset can refer to one or more resolution-specific "variants", see
+# https://flutter.dev/assets-and-images/#resolution-aware
+
+# For details regarding adding assets from package dependencies, see
+# https://flutter.dev/assets-and-images/#from-packages
+```
+
+<br>
+
+Image를 불러오기 위해서는 Image Widget을 사용하면 된다.
+
+```dart
+class Body extends StatelessWidget {
+  const Body({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Image.asset('assets/images/sample1.png'),
+    );
+  }
+}
+```
+
+Image Widget은 Image.asset('url') 함수로 자원을 불러올 수 있다.
+
+Image.network('url')로는 네트워크 내에 있는 자원을 불러올 수도 있는데, 이 방식보다는 [cached_network_image](https://pub.dev/packages/cached_network_image)를 사용하면 Caching기능도 지원되어 훨씬 효율적이다.
