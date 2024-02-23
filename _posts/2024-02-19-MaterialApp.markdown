@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MaterialApp
+title: MaterialApp 위젯
 date: 2024-02-19 21:53:00 +0900
 category: Flutter
 permalink: /flutter/materialapp
@@ -9,7 +9,7 @@ tags: [MaterialApp]
 
 <br>
 
-Flutter의 `MaterialApp` 위젯은 기본적인 재료 디자인 시각적 레이아웃 구조를 제공합니다. 이 위젯의 주요 속성은 다음과 같습니다:
+Flutter의 `MaterialApp` Widget은 Google이 제시한 Material Design을 구현하는 가장 바탕이 되는 Widget으로, 주요 속성은 다음과 같습니다:
 
 1. `home`: 애플리케이션의 첫 화면으로 표시할 위젯을 지정합니다.
 2. `title`: 애플리케이션의 제목을 설정하여 디바이스에서 표시합니다.
@@ -22,7 +22,3 @@ Flutter의 `MaterialApp` 위젯은 기본적인 재료 디자인 시각적 레�
 9. `builder`: 애플리케이션의 루트 위젯을 생성합니다.
 10. `locale`: 애플리케이션의 로컬라이제이션을 위한 로캘을 설정합니다.
 11. `localizationsDelegates`와 `supportedLocales`: 앱의 로컬라이즈된 리소스를 정의합니다.
-
-## 🌐 Sources
-
-1. [100sucoding.tistory.com - 플러터(Flutter) 입문 2. MaterialApp과 Scaffold - 백수코딩](https://100sucoding.tistory.com/33)
