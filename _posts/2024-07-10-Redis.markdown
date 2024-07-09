@@ -1,0 +1,8 @@
+---
+layout: post
+title: Redis
+date: 2024-02-23 20:30:00 +0900
+category: Redis
+permalink: /redis/basis
+tags: [redis]
+---
