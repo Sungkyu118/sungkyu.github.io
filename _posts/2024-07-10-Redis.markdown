@@ -1,8 +1,357 @@
 ---
 layout: post
-title: Redis
-date: 2024-02-23 20:30:00 +0900
+title: Redis 데이터 구조
+date: 2024-07-10 00:00:00 +0900
 category: Redis
 permalink: /redis/basis
 tags: [redis]
 ---
+
+<br>
+
+## String
+
+String 타입의 데이터 구조. 텍스트, 직렬화된 객체 등을 저장하는 용도로 자주 사용
+
+<br>
+
+### SET
+
+- Time Complexity: O(1)
+- Description: 지정된 key에 문자열을 저장
+
+```bash
+SET key value
+```
+
+ex)
+
+```bash
+GET user:1 '{"name": "John", "age": 13}'
+```
+
+<br>
+
+### GET
+
+- Time Complexity: O(1)
+- Description: 지정된 key의 문자열을 조회
+
+```bash
+GET key
+```
+
+ex)
+
+```bash
+GET user:1
+```
+
+<br>
+
+## List
+
+데이터 삽입 순서에 따라 정렬된 문자열 컬렉션의 형태
+
+<br>
+
+### LRANGE
+
+- Time Complexity: O(S+N) - S는 (HEAD or TAIL)에서의 distance, N은 지정된 요소 수
+- Description: List에서 지정된 범위의 요소를 반환
+
+```bash
+LRANGE key start stop
+```
+
+ex)
+
+```bash
+LRANGE user_list 0 2
+```
+
+<br>
+
+### LPUSH
+
+- Time Complexity: O(1)
+- Description: List의 HEAD에 지정된 요소를 추가
+
+```bash
+LPUSH key element
+```
+
+ex)
+
+```bash
+LPUSH user_list user_1
+```
+
+<br>
+
+### RPUSH
+
+- Time Complexity: O(1)
+- Description: List의 TAIL에 지정된 요소를 추가
+
+```bash
+RPUSH key element
+```
+
+ex)
+
+```bash
+RPUSH user_list user_1
+```
+
+<br>
+
+### LPOP
+
+- Time Complexity: O(N) - N은 반환된 요소 수
+- Description: List의 첫번쨰 요소를 제거하고 반환
+
+```bash
+LPOP key [count]
+```
+
+ex)
+
+```bash
+LPOP user_list
+```
+
+<br>
+
+### RPOP
+
+- Time Complexity: O(N) - N은 반환된 요소 수
+- Description: List의 마지막 요소를 제거하고 반환
+
+```bash
+RPOP key [count]
+```
+
+ex)
+
+```bash
+RPOP user_list
+```
+
+<br>
+
+### LLEN
+
+- Time Complexity: O(1)
+- Description: List의 저장된 요소 수를 반환
+
+```bash
+LLEN key
+```
+
+ex)
+
+```bash
+LLEN user_list
+```
+
+<br>
+
+### LPOS
+
+- Time Complexity: O(N) - N은 목록의 요소 수
+- Description: List에서 일치하는 요소를 찾고 인덱스를 반환
+
+```bash
+LPOS key element
+```
+
+ex)
+
+```bash
+LPOS user_list user_1
+```
+
+<br>
+
+## Set
+
+순서가 지정되지 않은 문자열 컬렉션의 형태. 중복 요소가 허용되지 않음
+
+<br>
+
+### SMEMBERS
+
+- Time Complexity: O(N) - N은 저장된 요소 수
+- Description: Set에 저장된 모든 요소를 반환
+
+```bash
+SMEMBERS key
+```
+
+ex)
+
+```bash
+SMEMBERS user_list
+```
+
+<br>
+
+### SADD
+
+- Time Complexity: O(1)
+- Description: Set에 멤버를 추가
+
+```bash
+SADD key member
+```
+
+ex)
+
+```bash
+SADD user_list user_1
+```
+
+<br>
+
+### SISMEMBER
+
+- Time Complexity: O(1)
+- Description: Set에 멤버가 포함되어 있는지 확인
+
+```bash
+SISMEMBER key member
+```
+
+ex)
+
+```bash
+SISMEMBER user_list user_1
+```
+
+<br>
+
+### SCARD
+
+- Time Complexity: O(1)
+- Description: Set에 저장된 요소 수를 반환
+
+```bash
+SCARD key
+```
+
+ex)
+
+```bash
+SCARD user_list
+```
+
+<br>
+
+### SREM
+
+- Time Complexity: O(N) - N은 삭제할 요소의 수
+- Description: Set에 저장된 요소를 제거
+
+```bash
+SREM key member
+```
+
+ex)
+
+```bash
+SREM user_list user_1
+```
+
+<br>
+
+## Sored Set
+
+지정한 스코어에 따라서 순서가 지정되는 문자열 컬렉션의 형태. 중복 요소가 허용되지 않음.
+
+<br>
+
+### ZRANGE
+
+- Time Complexity: O(Log(N) + M) - N은 정렬된 집합의 요소 수, M은 반환된 요소 수
+- Description: Sorted Set에 저장된 범위 내(순서, 스코어) 요소를 반환
+
+```bash
+ZRANGE key start stop
+```
+
+ex)
+
+```bash
+ZRANGE user_list 0 -1
+```
+
+<br>
+
+### ZADD
+
+- Time Complexity: O(Log(N)) - N은 정렬된 집합의 요소 수
+- Description: member가 score에 의해 정렬 및 저장. 동일한 score인 경우 사전순 정렬
+
+```bash
+ZADD key score member
+```
+
+ex)
+
+```bash
+ZADD user_list 100 user_1
+```
+
+<br>
+
+### ZCARD
+
+- Time Complexity: O(1)
+- Description: 해당하는 key의 요소 수를 반환
+
+```bash
+ZCARD key
+```
+
+ex)
+
+```bash
+ZCARD user_list
+```
+
+<br>
+
+### ZPOPMIN
+
+- Time Complexity: O(log(N) \* M) - N은 정렬된 집합의 요소 수, M은 POP된 요소 수
+- Description: 점수가 낮은 순으로 멤버를 제거하고 반환
+
+```bash
+ZPOPMIN key [count]
+```
+
+ex)
+
+```bash
+ZPOPMIN user_list
+```
+
+<br>
+
+### ZPOPMAX
+
+- Time Complexity: O(log(N) \* M) - N은 정렬된 집합의 요소 수, M은 POP된 요소 수
+- Description: 점수가 높은 순으로 멤버를 제거하고 반환
+
+```bash
+ZPOPMAX key
+```
+
+ex)
+
+```bash
+ZPOPMAX user_list
+```
+
+<br>
